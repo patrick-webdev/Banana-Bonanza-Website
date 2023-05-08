@@ -26,4 +26,21 @@
     & > *{
         padding: 0.75rem;
     }
+
+    &--hookshot{
+        background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/hookshot.png');
+        background-position: center;
+    }
+    &--envirometal{
+        background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/envirometal.png');
+        background-position: center;
+    }
+    &--invisiheist{
+        background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/invisiheist.png');
+        background-position: center bottom;
+    }
+    &--cowball{
+        background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/cowball.png');
+        background-position: center;
+    }
 }
