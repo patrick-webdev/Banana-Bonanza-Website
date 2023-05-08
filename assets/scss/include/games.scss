@@ -12,6 +12,7 @@
 
     &__title, &__description, &__link{
         margin: 0;
+        // text-shadow: -$textOutlineSize -$textOutlineSize 0 $dark, $textOutlineSize -$textOutlineSize 0 $dark, -$textOutlineSize $textOutlineSize 0 $dark, $textOutlineSize $textOutlineSize 0 $dark;
     }
 
     &__year{
@@ -37,10 +38,18 @@
     }
     &--invisiheist{
         background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/invisiheist.png');
-        background-position: center bottom;
+        background-position: center;
     }
     &--cowball{
         background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/cowball.png');
+        background-position: center;
+    }
+    &--papuru{
+        background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/papuru.png');
+        background-position: center;
+    }
+    &--aguidetolife{
+        background: linear-gradient( rgba(0, 0, 0, $darkenBackground), rgba(0, 0, 0, $darkenBackground) ), url('../img/aguidetolife.png');
         background-position: center;
     }
 }
