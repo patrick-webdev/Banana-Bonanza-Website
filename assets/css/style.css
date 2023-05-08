@@ -69,6 +69,14 @@ html, body {
   height: 100%;
 }
 
+#header__greeting {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
 #games {
   display: -webkit-box;
   display: -ms-flexbox;
