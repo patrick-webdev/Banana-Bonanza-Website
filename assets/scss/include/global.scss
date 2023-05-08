@@ -32,9 +32,10 @@ html, body{
 }
 
 
-.container > div{
-    margin: 2% 0;
+.container > *{
+    margin: 1% 0;
 }
+
 
 .btn{
     display: inline-block;

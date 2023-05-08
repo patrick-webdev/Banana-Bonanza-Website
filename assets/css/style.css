@@ -39,8 +39,8 @@ html, body {
           justify-content: center;
 }
 
-.container > div {
-  margin: 2% 0;
+.container > * {
+  margin: 1% 0;
 }
 
 .btn {
