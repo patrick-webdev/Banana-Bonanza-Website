@@ -188,6 +188,7 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 .member__img {
   height: 100px;
@@ -197,6 +198,19 @@ html, body {
      object-fit: cover;
   -o-object-position: 25% 0;
      object-position: 25% 0;
+}
+.member__icon {
+  display: none;
+  height: 45px;
+  width: 45px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 25% 0;
+     object-position: 25% 0;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 .member__img, .member__name, .member__bio, .member__social {
   margin: 0.4rem;
@@ -217,5 +231,11 @@ html, body {
 @media only screen and (max-width: 779px) {
   .member {
     width: 90%;
+  }
+  .member__img {
+    display: none;
+  }
+  .member__icon {
+    display: inline;
   }
 }
