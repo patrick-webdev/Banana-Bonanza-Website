@@ -58,8 +58,12 @@ html, body{
 }
 
 @media only screen and (max-width: $medium){
+    html, body{
+        background-size: 50%;
+    }
+
     .container{
-        margin: 0 10%;
+        margin: 0 5%;
     }
 
     .btn{
