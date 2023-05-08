@@ -16,8 +16,11 @@ let greetingClick = new Audio("assets/audio/button.wav");
 
 
 greeting.onclick = ()=>{
-    let newGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-    greeting.innerHTML = newGreeting;
-    greetingClick.currentTime = 0;
-    greetingClick.play();
+  let newGreeting = greeting.innerHTML;
+  while(newGreeting == greeting.innerHTML){
+    newGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+  }
+  greeting.innerHTML = newGreeting;
+  greetingClick.currentTime = 0;
+  greetingClick.play();
 };
