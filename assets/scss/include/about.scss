@@ -10,9 +10,18 @@
     border: 3px solid #cccccc;
     margin: 2rem 0;
     width: 50%;
+    display: flex;
 
-    &__name, &__bio, &__social{
-        margin: 0;
+    &__img{
+        height: 100px;
+        width: 100px;
+        border-radius: 25px;
+        object-fit: cover;
+        object-position: 25% 0;
+    }
+
+    &__img, &__name, &__bio, &__social{
+        margin: .4rem;
     }
 
     &__link{
@@ -21,7 +30,7 @@
     }
 
     & > *{
-        padding: 0.75rem;
+        margin: 0.75rem;
     }
 }
 

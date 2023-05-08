@@ -57,6 +57,10 @@ html, body{
     color: $dark;
 }
 
+.img--lightbackground{
+    background-color: $light;
+}
+
 @media only screen and (max-width: $medium){
     html, body{
         background-size: 50%;
