@@ -1,0 +1,56 @@
+@font-face{
+    font-family: mother;
+    src: url(../fonts/earthbound-beginnings.ttf);
+}
+@font-face{
+    font-family: dogicapixel;
+    src: url(../fonts/dogicapixel.ttf);
+}
+
+*{
+    font-family: dogicapixel;
+    color: $light;
+    line-height: 150%;
+}
+
+html, body{
+    background-color: $dark;
+    height: 100%;
+    margin: 0;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    background-attachment: fixed;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > div{
+    margin: 2rem 0;
+}
+
+.btn{
+    display: inline-block;
+    border: 1px solid $light;
+    margin: 0 2rem;
+    padding: 1rem;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: $light;
+    color: $dark;
+    transform: translate(7px, -7px);
+}
+
+.btn--active{
+    background-color: $light;
+    color: $dark;
+}
