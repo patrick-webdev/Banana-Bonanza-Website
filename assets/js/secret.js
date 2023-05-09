@@ -4,6 +4,8 @@ const secretSE = new Audio("assets/audio/secret.wav");
 secretSE.volume = 0.4;
 let input = [];
 
+console.log("This may be the only game developer website with a %cblog%c.", "font-weight: bold", "font-weight: normal");
+
 window.onkeyup = (e)=>{
   let character;
 
@@ -20,9 +22,11 @@ window.onkeyup = (e)=>{
     }
   }
   
-  if(JSON.stringify(code.split("")) == JSON.stringify(input)){
+  if(JSON.stringify(code.split("")) == JSON.stringify(input) && navBlog.style.display != "inline-block"){
     navBlog.style.display = "inline-block";
     secretSE.play();
+    console.log("Oh, there it is!");
+    console.log(" ▲\n▲ ▲");
   }
 
   if(input.length >= 4) input = [];
