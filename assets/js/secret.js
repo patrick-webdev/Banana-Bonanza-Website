@@ -26,7 +26,6 @@ window.onkeyup = (e)=>{
     navBlog.style.display = "inline-block";
     secretSE.play();
     console.log("Oh, there it is!\n ▲\n▲ ▲");
-    console.log("");
   }
 
   if(input.length >= 4) input = [];
