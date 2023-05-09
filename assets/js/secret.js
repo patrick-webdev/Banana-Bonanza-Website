@@ -25,8 +25,8 @@ window.onkeyup = (e)=>{
   if(JSON.stringify(code.split("")) == JSON.stringify(input) && navBlog.style.display != "inline-block"){
     navBlog.style.display = "inline-block";
     secretSE.play();
-    console.log("Oh, there it is!");
-    console.log(" ▲\n▲ ▲");
+    console.log("Oh, there it is!\n ▲\n▲ ▲");
+    console.log("");
   }
 
   if(input.length >= 4) input = [];
