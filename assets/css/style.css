@@ -94,6 +94,10 @@ html, body {
     margin: 0.5rem;
   }
 }
+nav {
+  padding-bottom: 2%;
+}
+
 .container--center {
   height: 100%;
 }
@@ -146,7 +150,7 @@ html, body {
 
 .game {
   border: 3px solid #cccccc;
-  margin: 2rem 0;
+  margin: 1% 0;
   width: 65%;
 }
 .game__title, .game__description, .game__link {

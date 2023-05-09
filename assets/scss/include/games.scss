@@ -7,12 +7,11 @@
 
 .game{
     border: 3px solid #cccccc;
-    margin: 2rem 0;
+    margin: 1% 0;
     width: 65%;
 
     &__title, &__description, &__link{
         margin: 0;
-        // text-shadow: -$textOutlineSize -$textOutlineSize 0 $dark, $textOutlineSize -$textOutlineSize 0 $dark, -$textOutlineSize $textOutlineSize 0 $dark, $textOutlineSize $textOutlineSize 0 $dark;
     }
 
     &__year{
