@@ -7,9 +7,10 @@
   src: url(../fonts/dogicapixel.ttf);
 }
 * {
-  font-family: dogicapixel;
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+  line-height: 125%;
   color: #cccccc;
-  line-height: 150%;
 }
 
 html, body {
@@ -59,6 +60,7 @@ html, body {
   color: #333333;
   -webkit-transform: translate(7px, -7px);
           transform: translate(7px, -7px);
+  border-color: #666666;
 }
 
 .btn--active {
@@ -68,6 +70,17 @@ html, body {
 
 .img--lightbackground {
   background-color: #cccccc;
+}
+
+.fnt--montserrat {
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+  line-height: 125%;
+}
+
+.fnt--pxl {
+  font-family: dogicapixel;
+  line-height: 150%;
 }
 
 @media only screen and (max-width: 779px) {
@@ -134,7 +147,7 @@ html, body {
 .game {
   border: 3px solid #cccccc;
   margin: 2rem 0;
-  width: 50%;
+  width: 65%;
 }
 .game__title, .game__description, .game__link {
   margin: 0;
@@ -208,7 +221,7 @@ html, body {
   background-color: #333333;
   border: 3px solid #cccccc;
   margin: 2rem 0;
-  width: 50%;
+  width: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,4 +275,66 @@ html, body {
   .member__icon {
     display: inline;
   }
+}
+#blogs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0;
+  width: 100%;
+}
+
+.blog {
+  background-color: #333333;
+  border: 3px solid #cccccc;
+  margin: 2rem 0;
+  display: block;
+  text-decoration: none;
+  width: 65%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.blog:hover {
+  background-color: #cccccc;
+  color: #333333;
+  border-color: #666666;
+  -webkit-transform: translate(7px, -7px);
+          transform: translate(7px, -7px);
+}
+.blog:hover > * {
+  color: #333333;
+}
+.blog > * {
+  margin: 0.75rem;
+}
+
+#post {
+  border: 3px solid #cccccc;
+  margin: 2rem 0;
+  padding: 2rem;
+  width: 50%;
+  background-color: #333333;
+  display: block;
+}
+#post__title {
+  margin-top: 0;
+  font-family: "Montserrat";
+}
+#post__content {
+  text-indent: 3rem;
+}
+#post__content p {
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+}
+#post__signature, #post__date {
+  text-align: right;
+  font-family: "Montserrat";
 }

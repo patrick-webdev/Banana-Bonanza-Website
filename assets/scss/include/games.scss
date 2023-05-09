@@ -8,7 +8,7 @@
 .game{
     border: 3px solid #cccccc;
     margin: 2rem 0;
-    width: 50%;
+    width: 65%;
 
     &__title, &__description, &__link{
         margin: 0;
@@ -17,6 +17,7 @@
 
     &__year{
         font-size: 0.7em;
+        
     }
 
     &__link{

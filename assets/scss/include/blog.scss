@@ -1,0 +1,67 @@
+//Blog index page
+#blogs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+}
+
+.blog{
+    background-color: $dark;
+    border: 3px solid #cccccc;
+    margin: 2rem 0;
+    display: block;
+    text-decoration: none;
+    width: 65%;
+    transition: all 0.5s ease;
+
+    &:hover{
+        background-color: $light;
+        color: $dark;
+        border-color: $medDark;
+        transform: translate(7px, -7px);
+
+        & > *{
+            color: $dark;
+        }
+    }
+
+    &__title{
+    }
+
+    &__description{}
+
+    & > *{
+        margin: 0.75rem;
+    }
+}
+
+//Individual posts
+#post{
+    border: 3px solid $light;
+    margin: 2rem 0;
+    padding: 2rem;
+    width: 50%;
+    background-color: $dark;
+    display: block;
+
+    &__title{
+        margin-top: 0;
+        font-family: "Montserrat";
+    }
+
+    &__content{
+        text-indent: 3rem;
+
+        p{
+            font-family: "Montserrat";
+            font-size: 1.1rem;
+        }
+    }
+
+    &__signature, &__date{
+        text-align: right;
+        font-family: "Montserrat";
+    }
+}
