@@ -1,19 +1,20 @@
 //Blog index page
 #blogs{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 0;
-    width: 100%;
+    width: 65%;
 }
 
 .blog{
     background-color: $dark;
     border: 3px solid #cccccc;
-    margin: 2rem 0;
+    margin: 2%;
     display: block;
     text-decoration: none;
-    width: 65%;
+    width: 45%;
     transition: all 0.5s ease;
 
     &:hover{
@@ -22,19 +23,25 @@
         border-color: $medDark;
         transform: translate(7px, -7px);
 
-        & > *{
+        
+        .blog__title, .blog__date, .blog__description{
             color: $dark;
         }
     }
 
-    &__title{
-    }
-
-    &__description{}
-
     & > *{
         margin: 0.75rem;
     }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    &__title{}
+
+    &__description{}
 }
 
 //Individual posts
@@ -46,9 +53,15 @@
     background-color: $dark;
     display: block;
 
+    &__back{
+        padding: 0.75%;
+        margin: 0;
+    }
+
     &__title{
         margin-top: 0;
-        font-family: "Montserrat";
+        font-size: 1.75rem;
+        text-align: center;
     }
 
     &__content{
@@ -62,6 +75,5 @@
 
     &__signature, &__date{
         text-align: right;
-        font-family: "Montserrat";
     }
 }

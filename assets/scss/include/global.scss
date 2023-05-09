@@ -46,6 +46,10 @@ html, body{
     transition: all 0.5s ease;
     text-decoration: none;
     background-color: $dark;
+
+    i{
+        transition: all 0.5s ease;
+    }
 }
 
 .btn:hover{
@@ -53,6 +57,10 @@ html, body{
     color: $dark;
     transform: translate(7px, -7px);
     border-color: $medDark;
+
+    i{
+        color: $dark;
+    }
 }
 
 .btn--active{

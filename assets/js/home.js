@@ -14,7 +14,6 @@ const greetings = [
 ];
 let greetingClick = new Audio("assets/audio/button.wav");
 
-
 greeting.onclick = ()=>{
   let newGreeting = greeting.innerHTML;
   while(newGreeting == greeting.innerHTML){
@@ -24,3 +23,11 @@ greeting.onclick = ()=>{
   greetingClick.currentTime = 0;
   greetingClick.play();
 };
+
+let product = document.getElementById("header__product");
+let navBlog = document.getElementById("nav__blog");
+product.onkeyup = ()=>{
+  if(product.innerHTML.includes("blog")){
+    navBlog.style.display = "inline-block";
+  }
+}

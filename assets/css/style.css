@@ -54,6 +54,10 @@ html, body {
   text-decoration: none;
   background-color: #333333;
 }
+.btn i {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 
 .btn:hover {
   background-color: #cccccc;
@@ -61,6 +65,9 @@ html, body {
   -webkit-transform: translate(7px, -7px);
           transform: translate(7px, -7px);
   border-color: #666666;
+}
+.btn:hover i {
+  color: #333333;
 }
 
 .btn--active {
@@ -96,6 +103,10 @@ html, body {
 }
 nav {
   padding-bottom: 2%;
+}
+
+#nav__blog {
+  display: none;
 }
 
 .container--center {
@@ -284,24 +295,26 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 0;
-  width: 100%;
+  width: 65%;
 }
 
 .blog {
   background-color: #333333;
   border: 3px solid #cccccc;
-  margin: 2rem 0;
+  margin: 2%;
   display: block;
   text-decoration: none;
-  width: 65%;
+  width: 45%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -312,13 +325,21 @@ nav {
   -webkit-transform: translate(7px, -7px);
           transform: translate(7px, -7px);
 }
-.blog:hover > * {
+.blog:hover .blog__title, .blog:hover .blog__date, .blog:hover .blog__description {
   color: #333333;
 }
 .blog > * {
   margin: 0.75rem;
 }
-
+.blog__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0;
+}
 #post {
   border: 3px solid #cccccc;
   margin: 2rem 0;
@@ -327,9 +348,14 @@ nav {
   background-color: #333333;
   display: block;
 }
+#post__back {
+  padding: 0.75%;
+  margin: 0;
+}
 #post__title {
   margin-top: 0;
-  font-family: "Montserrat";
+  font-size: 1.75rem;
+  text-align: center;
 }
 #post__content {
   text-indent: 3rem;
@@ -340,5 +366,4 @@ nav {
 }
 #post__signature, #post__date {
   text-align: right;
-  font-family: "Montserrat";
 }
