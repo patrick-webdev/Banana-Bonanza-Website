@@ -4,7 +4,7 @@ const secretSE = new Audio("assets/audio/secret.wav");
 secretSE.volume = 0.4;
 let input = [];
 
-console.log("This may be the only game developer website with a %cblog%c.", "font-weight: bold; text-decoration: underline;", "font-weight: normal;");
+console.log("This may be the only game developer website with a %cblog%c.", "font-weight: bold", "font-weight: normal;");
 
 window.onkeyup = (e)=>{
   let character;
