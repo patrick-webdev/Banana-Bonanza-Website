@@ -325,6 +325,11 @@ nav {
     display: inline;
   }
 }
+@media only screen and (max-width: 600px) {
+  #members {
+    width: 100%;
+  }
+}
 #blogs {
   display: -webkit-box;
   display: -ms-flexbox;
