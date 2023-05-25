@@ -14,6 +14,12 @@
     color: $light;
 }
 
+*::selection{
+    // background-color: #BBA4E5;
+    background-color: $light;
+    color: $dark;
+}
+
 html, body{
     background-color: $dark;
     height: 100%;

@@ -13,6 +13,16 @@
   color: #cccccc;
 }
 
+*::-moz-selection {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+*::selection {
+  background-color: #cccccc;
+  color: #333333;
+}
+
 html, body {
   background-color: #333333;
   height: 100%;
