@@ -1,47 +1,44 @@
-window.onload = ()=>{  
-  codeHandler();
+window.onload = ()=>{
+  console.log("This may be the only game developer website with a %cblog%c.", "font-weight: bold", "font-weight: normal;");  
+  checkTypedWord();
   removeFileExtensionsFromNav();
   changeGreeting();
 
   let video = "";
   song404(video);
-  document.getElementById("shuffle--404").addEventListener("click", song404);
+  if(document.getElementById("shuffle--404")) document.getElementById("shuffle--404").addEventListener("click", song404);
 }
 
-function codeHandler(){
-  const navBlog = document.getElementById("nav__blog");
-  const code = "BLOG";
-  const secretSE = new Audio("assets/audio/secret.wav");
-  secretSE.volume = 0.4;
-  let input = [];
+function checkTypedWord() {
+  const encryptedCodes = ["QkxPRw==", "NDA0"];
+  const codes = encryptedCodes.map(code => atob(code));
+  let typedWord = "";
 
-  console.log("This may be the only game developer website with a %cblog%c.", "font-weight: bold", "font-weight: normal;");
+  document.addEventListener("keydown", function(event) {
+    const keyPressed = event.key.toUpperCase();
+    typedWord += keyPressed;
 
-  window.onkeyup = (e)=>{
-    let character;
+    const matchingCode = codes.find(code => code.startsWith(typedWord));
 
-    if(e.which){
-      character = String.fromCharCode(e.which);
-      input.push(character);
-    }
-    else return;
-
-    for(let i=0; i<4; i++){
-      if(input[i]!=undefined && input[i]!=code[i]){
-        input = [];
-        return;
+    if (!matchingCode) {
+      typedWord = ""; // Reset typedWord if the typed characters do not match any code
+    } else if (typedWord === matchingCode) {
+       switch(typedWord){
+        case "BLOG":
+          playSound("zelda");
+          console.log("Oh, there it is!\n ▲\n▲ ▲");
+          const navBlog = document.getElementById("nav__blog");
+          navBlog.style.display = "inline-block";
+          break;
+        case "404":
+          if(!window.location.host) location.href = "404.html";
+          else location.href = "404";
+          break;
       }
-    }
-    
-    if(JSON.stringify(code.split("")) == JSON.stringify(input) && navBlog.style.display != "inline-block"){
-      navBlog.style.display = "inline-block";
-      secretSE.play();
-      console.log("Oh, there it is!\n ▲\n▲ ▲");
-    }
 
-    if(input.length >= 4) input = [];
-
-  }
+      typedWord = ""; // Reset typedWord after successfully typing a word
+    }
+  });
 }
 
 function removeFileExtensionsFromNav(){
@@ -79,18 +76,27 @@ function changeGreeting(){
       newGreeting = greetings[Math.floor(Math.random() * greetings.length)];
     }
     greeting.innerHTML = newGreeting;
-    playBeep();
+    playSound("beep");
   }
 }
 
-function playBeep(){
-  const greetingSE = new Audio("assets/audio/button.wav");
-  greetingSE.currentTime = 0;
-  greetingSE.play();
+function playSound(sound){
+  let SE = '';
+  switch(sound){
+    case "beep":
+      SE = new Audio("assets/audio/button.wav");
+      break;
+    case "zelda":
+      SE = new Audio("assets/audio/secret.wav");
+      SE.volume = 0.4;
+      break;
+  }
+  SE.currentTime = 0;
+  SE.play();
+  
 }
 
 function song404(video){
-  console.log("song");
   const iframe = document.getElementById("video--404");
   if(!iframe) return;
 
@@ -125,5 +131,5 @@ function song404(video){
   } while(video == oldVideo);
   
   iframe.setAttribute("src", src + video);
-  playBeep();
+  playSound("beep");
 }
