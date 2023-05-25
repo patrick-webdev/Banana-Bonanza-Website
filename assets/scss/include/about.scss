@@ -53,14 +53,15 @@
 
 @media only screen and (max-width: $large){
     .member{
-        width: 75%;
+        width: 100%;
     }
 }
 
 @media only screen and (max-width: $medium){
-    .member{
+    #members{
         width: 90%;
-
+    }
+    .member{
         &__img{
             display: none;
         }

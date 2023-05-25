@@ -311,11 +311,11 @@ nav {
 
 @media only screen and (max-width: 992px) {
   .member {
-    width: 75%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 779px) {
-  .member {
+  #members {
     width: 90%;
   }
   .member__img {
