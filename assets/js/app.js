@@ -24,13 +24,13 @@ function checkTypedWord() {
       typedWord = ""; // Reset typedWord if the typed characters do not match any code
     } else if (typedWord === matchingCode) {
        switch(typedWord){
-        case "BLOG":
+        case codes[0]:
           playSound("zelda");
           console.log("Oh, there it is!\n ▲\n▲ ▲");
           const navBlog = document.getElementById("nav__blog");
           navBlog.style.display = "inline-block";
           break;
-        case "404":
+        case codes[1]:
           if(!window.location.host) location.href = "404.html";
           else location.href = "404";
           break;
