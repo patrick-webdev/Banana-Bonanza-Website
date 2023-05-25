@@ -73,6 +73,12 @@ html, body {
   -webkit-transform: translate(7px, -7px) rotate(360deg) !important;
           transform: translate(7px, -7px) rotate(360deg) !important;
 }
+.btn--spin:active {
+  background-color: #333333 !important;
+  color: #cccccc;
+  -webkit-transform: translate(0px, 0px) rotate(360deg) !important;
+          transform: translate(0px, 0px) rotate(360deg) !important;
+}
 
 .btn:hover {
   background-color: #cccccc;
@@ -116,6 +122,13 @@ html, body {
     margin: 0.5rem;
   }
 }
+iframe {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 nav {
   padding-bottom: 2rem;
 }

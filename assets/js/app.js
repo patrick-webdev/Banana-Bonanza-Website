@@ -72,17 +72,21 @@ function changeGreeting(){
     "Welcome",
     "Hey there"
   ];
-  const greetingSE = new Audio("assets/audio/button.wav");
-
+  
   greeting.onclick = ()=>{
     let newGreeting = greeting.innerHTML;
     while(newGreeting == greeting.innerHTML){
       newGreeting = greetings[Math.floor(Math.random() * greetings.length)];
     }
     greeting.innerHTML = newGreeting;
-    greetingSE.currentTime = 0;
-    greetingSE.play();
+    playBeep();
   }
+}
+
+function playBeep(){
+  const greetingSE = new Audio("assets/audio/button.wav");
+  greetingSE.currentTime = 0;
+  greetingSE.play();
 }
 
 function song404(video){
@@ -121,4 +125,5 @@ function song404(video){
   } while(video == oldVideo);
   
   iframe.setAttribute("src", src + video);
+  playBeep();
 }
