@@ -279,7 +279,6 @@ nav {
 .member__img {
   height: 100px;
   width: 100px;
-  border-radius: 25px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 25% 0;
