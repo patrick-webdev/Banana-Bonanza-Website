@@ -3,9 +3,7 @@ window.onload = ()=>{
   checkTypedWord();
   removeFileExtensionsFromNav();
   changeGreeting();
-
-  let video = "";
-  song404(video);
+  song404("");
   if(document.getElementById("shuffle--404")) document.getElementById("shuffle--404").addEventListener("click", song404);
 }
 
@@ -97,6 +95,8 @@ function playSound(sound){
 }
 
 function song404(video){
+  if(video) playSound("beep");
+
   const iframe = document.getElementById("video--404");
   if(!iframe) return;
 
@@ -131,5 +131,4 @@ function song404(video){
   } while(video == oldVideo);
   
   iframe.setAttribute("src", src + video);
-  playSound("beep");
 }
