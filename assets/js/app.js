@@ -8,7 +8,7 @@ window.onload = ()=>{
 }
 
 function checkTypedWord() {
-  const encryptedCodes = ["QkxPRw==", "NDA0"];
+  const encryptedCodes = ["QkxPRw==", "NDA0", "U09NRVRISU5H"];
   const codes = encryptedCodes.map(code => atob(code));
   let typedWord = "";
 
@@ -23,15 +23,18 @@ function checkTypedWord() {
     } else if (typedWord === matchingCode) {
        switch(typedWord){
         case codes[0]:
+          const navBlog = document.getElementById("nav__blog");
+          if(navBlog.style.display == "inline-block") return;
           playSound("zelda");
           console.log("Oh, there it is!\n ▲\n▲ ▲");
-          const navBlog = document.getElementById("nav__blog");
           navBlog.style.display = "inline-block";
           break;
         case codes[1]:
           if(!window.location.host) location.href = "404.html";
           else location.href = "404";
           break;
+        case codes[2]:
+          playSound("something");
       }
 
       typedWord = ""; // Reset typedWord after successfully typing a word
@@ -87,6 +90,10 @@ function playSound(sound){
     case "zelda":
       SE = new Audio("assets/audio/secret.wav");
       SE.volume = 0.4;
+      break;
+    case "something":
+      SE = new Audio("assets/audio/something.wav");
+      SE.volume = 0.5;
       break;
   }
   SE.currentTime = 0;
