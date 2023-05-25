@@ -63,10 +63,15 @@ html, body {
   transition: all 0.5s ease;
   text-decoration: none;
   background-color: #333333;
+  cursor: pointer;
 }
 .btn i {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+.btn--spin:hover {
+  -webkit-transform: translate(7px, -7px) rotate(360deg) !important;
+          transform: translate(7px, -7px) rotate(360deg) !important;
 }
 
 .btn:hover {
@@ -376,4 +381,13 @@ nav {
 }
 #post__signature, #post__date {
   text-align: right;
+}
+
+.title--404 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.sub--404 {
+  text-align: center;
 }

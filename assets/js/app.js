@@ -1,7 +1,11 @@
-window.onload = ()=>{
+window.onload = ()=>{  
   codeHandler();
   removeFileExtensionsFromNav();
   changeGreeting();
+
+  let video = "";
+  song404(video);
+  document.getElementById("shuffle--404").addEventListener("click", song404);
 }
 
 function codeHandler(){
@@ -79,4 +83,42 @@ function changeGreeting(){
     greetingSE.currentTime = 0;
     greetingSE.play();
   }
+}
+
+function song404(video){
+  console.log("song");
+  const iframe = document.getElementById("video--404");
+  if(!iframe) return;
+
+  const songs = [
+    "_pKg0395nTE", //Yume Nikki - Snow World
+    "h1wSPmlZV-w", //Undertale - Determination
+    "LsAsJUTsYxs", //To the Moon - Main Theme
+    "wKKX5phpRo4", //A Short Hike - Hello?
+    "8NH0wfHHmvU", //VVVVVV - Predestined Fate
+    "HDIVH5Go9-Y", //Owlboy - Mesos
+    "8w7Jql2a-eE", //OneShot - Children of the Ruins
+    "n_Dxix0lvDM", //OMORI - Trees...
+    "jTw8T3ksSUQ", //Momodora Reverie Under the Moonlight - Overture
+    "f9TpaJKZIPI", //Momodora II - Title
+    "WGHLk334_Zo", //Momodora III - Ending
+    "XWVONhQ9JwM", //Lieat - Lamp
+    "w3bQzPWD1_w", //Iconoclast - Perished
+    "Zb9gZ-5z3kU", //Dweller's Empty Path - Leaves Fill The Path
+    "QIHUK68L9qQ", //Doki Doki Literature Club - I Still Love You
+    "uivFFnCI8tM", //DELTARUNE - BIG SHOT
+    "mK4v0XkNrVE", //Cave Story - Pulse
+    "VNUGl6DqRWc", //A Bird Story - Yesterday (Reversing)
+    "KmC9ehs53EU" //The Beginner's Guide - Be in This Place
+  ];
+  const src = "https://www.youtube-nocookie.com/embed/";
+  
+  let oldVideo = "";
+  if (video) oldVideo = video;
+
+  do{
+    video = songs[Math.floor(Math.random() * songs.length)];
+  } while(video == oldVideo);
+  
+  iframe.setAttribute("src", src + video);
 }
