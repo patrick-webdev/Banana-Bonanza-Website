@@ -1,17 +1,20 @@
 #members{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-top: 0;
+    flex-wrap: wrap;
+    width: 65%;
 }
 
 .member{
     background-color: $dark;
     border: 3px solid #cccccc;
-    margin: 2rem 0;
-    width: 65%;
+    margin: 2%;
     display: flex;
-    position: relative;
+    text-decoration: none;
+    width: 45%;
+    transition: all 0.5s ease;
 
     &__img{
         height: 100px;
@@ -33,7 +36,7 @@
         right: .5rem;
     }
 
-    &__img, &__name, &__bio, &__social{
+    &__img, &__name, &__role, &__social{
         margin: .4rem;
     }
 

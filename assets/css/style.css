@@ -250,25 +250,30 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 65%;
 }
 
 .member {
   background-color: #333333;
   border: 3px solid #cccccc;
-  margin: 2rem 0;
-  width: 65%;
+  margin: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  text-decoration: none;
+  width: 45%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .member__img {
   height: 100px;
@@ -292,7 +297,7 @@ nav {
   top: 0.5rem;
   right: 0.5rem;
 }
-.member__img, .member__name, .member__bio, .member__social {
+.member__img, .member__name, .member__role, .member__social {
   margin: 0.4rem;
 }
 .member__link {
@@ -403,4 +408,9 @@ nav {
 
 .sub--404 {
   text-align: center;
+}
+
+#video--404 {
+  width: 100%;
+  aspect-ratio: 1.8/1;
 }
