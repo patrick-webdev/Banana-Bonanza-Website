@@ -23,6 +23,11 @@
         border-radius: 25px;
         object-fit: cover;
         object-position: 25% 0;
+
+        &--patrick{
+            outline: 4px solid #6853bc;
+            outline-offset: -4px;
+        }
     }
 
     &__icon{

@@ -285,6 +285,10 @@ nav {
   -o-object-position: 25% 0;
      object-position: 25% 0;
 }
+.member__img--patrick {
+  outline: 4px solid #6853bc;
+  outline-offset: -4px;
+}
 .member__icon {
   display: none;
   height: 45px;
